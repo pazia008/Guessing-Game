@@ -28,11 +28,21 @@ namespace GuessingGame
                         Console.WriteLine($"({CurrentGuesses}/4)");
                         break;
                     }
-                    else
+                    else if (GuessNumbers > SecretNumber)
                     {
                         Console.WriteLine("YOU have FAILED!");
                         Console.WriteLine($"you are on guess {CurrentGuesses}");
                         Console.WriteLine($"({CurrentGuesses}/4)");
+                        Console.WriteLine("....Your Guess Was Too High");
+                        CurrentGuesses++;
+
+                    }
+                    else if (GuessNumbers < SecretNumber)
+                    {
+                        Console.WriteLine("YOU have FAILED!");
+                        Console.WriteLine($"you are on guess {CurrentGuesses}");
+                        Console.WriteLine($"({CurrentGuesses}/4)");
+                        Console.WriteLine("....Your Guess Was Too Low");
                         CurrentGuesses++;
 
                     };
