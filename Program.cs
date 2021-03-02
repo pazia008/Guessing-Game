@@ -10,7 +10,8 @@ namespace GuessingGame
             Console.WriteLine("--------------------------------");
 
 
-            int SecretNumber = 42;
+            var random = new Random();
+            int SecretNumber = random.Next(1, 100);
             int CurrentGuesses = 1;
 
             void Attempt()
@@ -24,12 +25,14 @@ namespace GuessingGame
                     {
                         Console.WriteLine("PROUD OF YOU!!");
                         Console.WriteLine($"you are on guess {CurrentGuesses}");
+                        Console.WriteLine($"({CurrentGuesses}/4)");
                         break;
                     }
                     else
                     {
                         Console.WriteLine("YOU have FAILED!");
                         Console.WriteLine($"you are on guess {CurrentGuesses}");
+                        Console.WriteLine($"({CurrentGuesses}/4)");
                         CurrentGuesses++;
 
                     };
