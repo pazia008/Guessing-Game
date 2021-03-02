@@ -11,21 +11,20 @@ namespace GuessingGame
 
             string Guess = Console.ReadLine();
             int GuessNumbers = Int32.Parse(Guess);
-            int SecretNumber = 69;
+            int SecretNumber = 42;
 
             void Attempt()
             {
-                while (GuessNumbers != SecretNumber)
+
+                if (GuessNumbers == SecretNumber)
                 {
-                    if (GuessNumbers == SecretNumber)
-                    {
-                        Console.WriteLine("PROUD OF YOU");
-                    }
-                    else
-                    {
-                        Console.WriteLine("YOU have FAILED!");
-                    };
+                    Console.WriteLine("PROUD OF YOU!!");
                 }
+                else
+                {
+                    Console.WriteLine("YOU have FAILED!");
+                };
+
 
             }
             Attempt();
